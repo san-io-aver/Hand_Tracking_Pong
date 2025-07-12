@@ -1,5 +1,5 @@
 import turtle
-
+import time
 win = turtle.Screen()
 win.title("SinglePOng")
 win.bgcolor("black")
@@ -18,12 +18,12 @@ bat.goto(0,-270)
 #ball
 ball = turtle.Turtle()
 ball.speed(0)
-ball.shape("square")
+ball.shape("circle")
 ball.color("white")
 ball.penup()
 ball.goto(0,0)
-ball.dx = 1
-ball.dy = 1
+ball.dx = 5
+ball.dy = 5
 
 #movement
 def bat_right():
@@ -58,9 +58,14 @@ while True:
         ball.sety(-290)
         ball.goto(400,400)
         ball.dy *= -1     
-    if ball.ycor() < -250 and ball.ycor() > -270 and ball.xcor() < bat.xcor()+40 and ball.xcor() > bat.xcor()-40:   
+    if ball.ycor() < -250 and ball.ycor() > -270 and ball.xcor() < bat.xcor()+50 and ball.xcor() > bat.xcor()-50:   
         ball.sety(-250)
+        offset = ball.xcor() - bat.xcor()
+        print(offset)
+        ball.dx = offset * 0.5 # control angle sensitivity
         ball.dy *= -1
+    
+    time.sleep(1/60)
         
         
         
