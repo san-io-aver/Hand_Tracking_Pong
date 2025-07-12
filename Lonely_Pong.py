@@ -34,6 +34,7 @@ ball.dy = 3
 
 score_display = turtle.Turtle()
 score_display.speed(0)
+score_display.penup() 
 score_display.hideturtle()
 score_display.color("white")
 score_display.goto(0, 260)
@@ -105,6 +106,4 @@ except (turtle.Terminator, tkinter.TclError):
     print("closed.")
 finally:
     ht.exit()        
-        
-        
         
