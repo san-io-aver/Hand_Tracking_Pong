@@ -1,4 +1,4 @@
-# Lonely Pong for lonely people
+# Pong for lonely people
 Because clearly, what the world needed most was a single-player pong game you control with your hand.  
 **Groundbreaking. Life-changing. Utterly pointless**.
 
